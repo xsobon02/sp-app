@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: transparent;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1.8rem;
+  color: #f4f1de;
+  text-shadow: 0px 0px 4px #3d405b, 0px 0px 4px #3d405b, 0px 0px 4px #3d405b, 0px 0px 4px #3d405b;
+  line-height: 100%;
+
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #f4f1de;
+}
+
+#logo-text {
+  transition: 0.25s ease-out;
+  gap: 0.2rem;
+}
+
+.loading-paragraph {
+  font-size: 2rem;
+  margin-left: 50%;
+  color: #f4f1de;
+  text-shadow: 0px 0px 4px #3d405b, 0px 0px 4px #3d405b, 0px 0px 4px #3d405b, 0px 0px 4px #3d405b;
+  font-family: 'Secular One', sans-serif;
+}
+
+#link-selector-div {
+  position: absolute;
+  bottom: 2rem;
+  left: 1.5rem;
+}
+
+#link-selector-div label {
+  margin-right: 0.3rem;
+  font-family: 'Secular One', sans-serif;
+  color: #3d405b;
+}
+
+#link-selector {
+  transition: 0.25s ease-out;
+  border: none;
+  background-color: #f4f1de;
+  color: #3d405b;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1rem;
+  border-radius: 2rem;
+  width: 6.5rem;
+  height: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #3d405b;
+}
+
+#next-button {
+  transition: 0.25s ease-out;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  border: none;
+  background-color: #f4f1de;
+  color: #3d405b;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1rem;
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #3d405b;
+  text-align: center;
+  padding: 0.25rem;
+}
+
+#timer {
+  position: absolute;
+  bottom: 1rem;
+  left: 0.5%;
+  width: 99%;
+  height: 1px;
+  margin: 0;
+  background-color: #f4f1de;
+  border: 1px solid #3d405b;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #f4f1de;
+  border-radius: 30px;
+  border: 1px solid #3d405b;
+}
+
+
+#datetime {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  bottom: 2rem;
+  right: 1rem;
+  margin: 0;
+  background-color: #f4f1de;
+  height: 4rem;
+  width: 8rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px #3d405b;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1rem;
+  color: #3d405b;
+  cursor: default;
+}
+
+#datetime p {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#menu-button:hover,
+#logo-text:hover {
+  text-shadow: 0px 0px 4px #f2cc8f, 0px 0px 4px #f2cc8f, 0px 0px 4px #f2cc8f, 0px 0px 4px #f2cc8f;
+  transition: all 0.25s ease;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+#rain-cloud {
+  font-size: 3rem;
+}
+
+#menu-icon {
+  font-size: 2rem;
+}
+
+.map-container {
+  z-index: 1;
+}
+
+.map-container:hover {
+  cursor: grab;
+}
+
+.map-container:active {
+  cursor: grabbing;
+}
+
+.ol-zoom {
+  top: 4.5rem !important;
+  left: 1.5rem !important;
+}
+
+.ol-control {
+  background-color: transparent !important;
+}
+
+.ol-zoom-in,
+.ol-zoom-out {
+  transition: 0.25s ease-out;
+  border-radius: 50% !important;
+  font-weight: bolder !important;
+  font-size: 1.1rem !important;
+  box-shadow: 0px 0px 5px #3d405b;
+  color: #3d405b !important;
+  background-color: #f4f1de !important;
+  cursor: pointer;
+}
+
+.ol-zoom-in {
+  margin-bottom: 0.4rem !important;
+}
+
+.ol-zoom-in:hover,
+.ol-zoom-out:hover,
+#link-selector:hover,
+#next-button:hover {
+  outline: none !important;
+  background-color: #3d405b !important;
+  color: #f4f1de !important;
+  transition: 0.25s;
+}
+
+#menu-button {
+  background: none;
+  border: none;
+  color: #f4f1de;
+  text-shadow: 0px 0px 4px #3d405b, 0px 0px 4px #3d405b, 0px 0px 4px #3d405b, 0px 0px 4px #3d405b;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+#link-selector:active,
+#next-button:active,
+#map-value-change:active {
+  transform: translate(0, 2px);
+}
+
+.map-value-image {
+  position: absolute;
+  right: 1rem;
+  top: 30%;
+  height: 28%;
+}
+
+#map-value-change-div {
+  position: absolute;
+  right: 1rem;
+  bottom: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+#map-value-change-div label {
+  margin-left: 0.3rem;
+  font-family: 'Secular One', sans-serif;
+  color: #3d405b;
+}
+
+#map-value-change {
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  box-shadow: 0px 0px 5px #3d405b;
+  border-radius: 1rem;
+  text-align: center;
+  color: #3d405b;
+  font-family: 'Secular One', sans-serif;
+  background-color: #f4f1de;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#map-value-change:hover {
+  background-color: #3d405b;
+  color: #f4f1de;
+  transition: 0.2s ease-out;
+}
