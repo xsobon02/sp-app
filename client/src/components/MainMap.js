@@ -12,9 +12,8 @@ import ImageLayer from 'ol/layer/Image';
 import Static from 'ol/source/ImageStatic';
 import Projection from "ol/proj/Projection";
 
-import { realLinks } from '../data/constants';
+//import { realLinks } from '../data/constants';
 import { fakeLinks } from '../data/constants';
-import { numberToGlsl } from 'ol/style/expressions';
 
 export default function MainMap(props) {
   let tenMinHour = 1;
@@ -72,10 +71,11 @@ export default function MainMap(props) {
   // const changeFunction = function (feature) {
   //   return styles2[feature.getGeometry().getType()];
   // };
-  const realLinksSource = new VectorSource({
-    features: new GeoJSON().readFeatures(realLinks,
-      { featureProjection: 'EPSG:3857' }),
-  });
+
+  // const realLinksSource = new VectorSource({
+  //   features: new GeoJSON().readFeatures(realLinks,
+  //     { featureProjection: 'EPSG:3857' }),
+  // });
   const fakeLinksSource = new VectorSource({
     features: new GeoJSON().readFeatures(fakeLinks,
       { featureProjection: 'EPSG:3857' }),
@@ -83,7 +83,7 @@ export default function MainMap(props) {
 
   //Link Layer creation
   const linkLayer = new VectorLayer({
-    source: realLinksSource,
+    source: fakeLinksSource,
     style: styleFunction,
     visible: true,
     title: 'CMLs'
@@ -352,7 +352,8 @@ export default function MainMap(props) {
       if (real) {
         linkLayer.setSource(fakeLinksSource);
       } else {
-        linkLayer.setSource(realLinksSource);
+        console.log('placeholder')
+        //linkLayer.setSource(realLinksSource);
       }
     })
     //Play images
